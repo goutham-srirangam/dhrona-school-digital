@@ -56,37 +56,34 @@ export default function Index() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 gradient-primary" />
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="min-h-[85vh] flex items-center">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-white/90 text-sm font-medium mb-6 backdrop-blur-sm">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               ✦ Admissions Open for 2025-26
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6">
               Miryalaguda's First{" "}
-              <span className="text-yellow-300">Future Ready</span>{" "}
+              <span className="text-primary">Future Ready</span>{" "}
               School
             </h1>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
               We Truly Care for the Physical, Mental & Cultural Growth of Our Little Ones
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/admissions">
-                <Button size="lg" className="bg-white text-secondary hover:bg-white/90 font-semibold text-base px-8 rounded-full shadow-lg">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base px-8 rounded-full shadow-md">
                   Apply Now <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>
               <Link to="/about">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 rounded-full text-base px-8">
+                <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-base px-8">
                   Learn More
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-        {/* Decorative circle */}
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
       </section>
 
       {/* Highlights */}
