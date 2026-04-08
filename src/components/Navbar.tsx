@@ -43,10 +43,8 @@ export default function Navbar() {
       </div>
       <nav
         className={cn(
-          "transition-all duration-300",
-          scrolled
-            ? "bg-white/85 backdrop-blur-xl shadow-lg border-b border-white/20"
-            : "bg-transparent"
+          "transition-all duration-300 bg-white",
+          scrolled && "shadow-lg border-b border-white/20"
         )}
       >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
