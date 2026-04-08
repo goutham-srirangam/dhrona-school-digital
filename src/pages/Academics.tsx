@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import { BookOpenCheck, Calculator, Sparkles, GraduationCap, Lightbulb, Brain } from "lucide-react";
@@ -28,6 +29,7 @@ const grades = [
 export default function Academics() {
   return (
     <main className="pt-28">
+      <SEO title="Academics" description="Explore A.S.R Dhrona School's curriculum — Nursery to Class IX, IIT-JEE/NEET foundation, MEP, MPG, MBM programs, and concept-based learning in Miryalaguda." path="/academics" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Academics</h1>

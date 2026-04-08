@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
+import FAQSection from "@/components/FAQSection";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import heroImg from "@/assets/hero-school.jpg";
@@ -56,7 +58,11 @@ function RevealCard({ children, className, delay = 0 }: { children: React.ReactN
 export default function Index() {
   return (
     <main className="pt-24 md:pt-28">
-      {/* Hero */}
+      <SEO
+        title="A.S.R Dhrona School | Miryalaguda's First Future Ready School"
+        description="A.S.R Dhrona School, Miryalaguda — Admissions open for Nursery to Class IX. IIT-JEE/NEET foundation, yoga, chess, Indian cultural values, smart classrooms & holistic education."
+        path="/"
+      />
       <section className="min-h-[60vh] md:min-h-[75vh] flex items-center py-10 md:py-0">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -177,6 +183,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* CTA Banner */}
       <section className="py-20">

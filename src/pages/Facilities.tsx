@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import { Stethoscope, Lock, Bus, ShieldCheck, Wifi, BookOpen } from "lucide-react";
@@ -24,6 +25,7 @@ const facilities = [
 export default function Facilities() {
   return (
     <main className="pt-28">
+      <SEO title="Facilities" description="World-class school facilities at A.S.R Dhrona — smart classrooms, student health cards, personal lockers, GPS-tracked transport, library & safe campus in Miryalaguda." path="/facilities" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Facilities</h1>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,6 +38,7 @@ export default function Contact() {
 
   return (
     <main className="pt-28">
+      <SEO title="Contact Us" description="Contact A.S.R Dhrona School Miryalaguda — visit Vasavi Nagar, call +91 9493-46-1122 or email asrdhrona@gmail.com. Schedule a campus tour today." path="/contact" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Contact <span className="text-secondary">Us</span></h1>
