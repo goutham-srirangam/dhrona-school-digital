@@ -19,10 +19,10 @@ function RevealDiv({ children, className, delay = 0 }: { children: React.ReactNo
 }
 
 const contactInfo = [
-  { icon: MapPin, title: "Address", lines: ["Vasavi Nagar, Miryalaguda", "Telangana, India"] },
-  { icon: Phone, title: "Phone", lines: ["+91 9493-46-1122", "+91 9493-56-1122"] },
-  { icon: Mail, title: "Email", lines: ["asrdhrona@gmail.com"] },
-  { icon: Clock, title: "School Hours", lines: ["Mon – Sat: 8:00 AM – 4:00 PM"] },
+  { icon: MapPin, title: "Address", lines: ["Vasavi Nagar, Miryalaguda", "Telangana, India"], color: "primary" },
+  { icon: Phone, title: "Phone", lines: ["+91 9493-46-1122", "+91 9493-56-1122"], color: "secondary" },
+  { icon: Mail, title: "Email", lines: ["asrdhrona@gmail.com"], color: "primary" },
+  { icon: Clock, title: "School Hours", lines: ["Mon – Sat: 8:00 AM – 4:00 PM"], color: "secondary" },
 ];
 
 export default function Contact() {
@@ -39,7 +39,7 @@ export default function Contact() {
     <main className="pt-28">
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Contact <span className="text-secondary">Us</span></h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We'd love to hear from you. Reach out for admissions, queries, or a campus visit.</p>
         </div>
       </section>
@@ -54,8 +54,8 @@ export default function Contact() {
                 {contactInfo.map((c, i) => (
                   <RevealDiv key={c.title} delay={i * 80}>
                     <div className="bg-card rounded-xl p-5 border border-border/50 shadow-sm h-full">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
-                        <c.icon className="w-5 h-5 text-primary" />
+                      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3", c.color === "secondary" ? "bg-secondary/10" : "bg-primary/10")}>
+                        <c.icon className={cn("w-5 h-5", c.color === "secondary" ? "text-secondary" : "text-primary")} />
                       </div>
                       <h3 className="font-display font-semibold text-foreground text-sm mb-1">{c.title}</h3>
                       {c.lines.map((line, j) => (
@@ -106,7 +106,7 @@ export default function Contact() {
                     <Label htmlFor="c-msg">Message *</Label>
                     <Textarea id="c-msg" required rows={4} value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} placeholder="How can we help you?" />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground rounded-full font-semibold">
+                  <Button type="submit" size="lg" className="w-full bg-secondary text-secondary-foreground rounded-full font-semibold">
                     Send Message
                   </Button>
                 </form>

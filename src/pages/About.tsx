@@ -13,9 +13,9 @@ function RevealDiv({ children, className, delay = 0 }: { children: React.ReactNo
 }
 
 const values = [
-  { icon: Heart, title: "Physical Growth", desc: "Yoga, sports, martial arts, and health tracking ensure every child stays active and healthy." },
-  { icon: GraduationCap, title: "Mental Growth", desc: "Concept-based learning, IIT foundation, and memory techniques sharpen young minds." },
-  { icon: Globe, title: "Cultural Growth", desc: "Shlokas, Indian values, and traditional arts keep our students connected to their roots." },
+  { icon: Heart, title: "Physical Growth", desc: "Yoga, sports, martial arts, and health tracking ensure every child stays active and healthy.", color: "primary" },
+  { icon: GraduationCap, title: "Mental Growth", desc: "Concept-based learning, IIT foundation, and memory techniques sharpen young minds.", color: "secondary" },
+  { icon: Globe, title: "Cultural Growth", desc: "Shlokas, Indian values, and traditional arts keep our students connected to their roots.", color: "primary" },
 ];
 
 const faculty = [
@@ -30,7 +30,7 @@ export default function About() {
       {/* Hero */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">About A.S.R Dhrona</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">About <span className="text-secondary">A.S.R Dhrona</span></h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Global Vision, Indian Roots — shaping tomorrow's leaders with timeless values.</p>
         </div>
       </section>
@@ -51,9 +51,9 @@ export default function About() {
               </div>
             </RevealDiv>
             <RevealDiv delay={100}>
-              <div className="bg-card rounded-xl p-8 border border-border/50 shadow-sm h-full">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                  <Target className="w-7 h-7 text-primary" />
+              <div className="bg-card rounded-xl p-8 border border-secondary/20 shadow-sm h-full">
+                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
+                  <Target className="w-7 h-7 text-secondary" />
                 </div>
                 <h2 className="text-2xl font-display font-bold text-foreground mb-3">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -73,8 +73,8 @@ export default function About() {
             {values.map((v, i) => (
               <RevealDiv key={v.title} delay={i * 100}>
                 <div className="bg-card rounded-xl p-6 border border-border/50 shadow-sm text-center h-full">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <v.icon className="w-6 h-6 text-primary" />
+                  <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4", v.color === "secondary" ? "bg-secondary/10" : "bg-primary/10")}>
+                    <v.icon className={cn("w-6 h-6", v.color === "secondary" ? "text-secondary" : "text-primary")} />
                   </div>
                   <h3 className="font-display font-semibold text-foreground mb-2">{v.title}</h3>
                   <p className="text-sm text-muted-foreground">{v.desc}</p>
@@ -93,8 +93,8 @@ export default function About() {
             {faculty.map((f, i) => (
               <RevealDiv key={f.name} delay={i * 100}>
                 <div className="flex gap-4 p-5 rounded-xl border border-border/50 bg-card shadow-sm">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Users className="w-5 h-5 text-primary" />
+                  <div className={cn("w-11 h-11 rounded-lg flex items-center justify-center shrink-0", i % 2 === 0 ? "bg-secondary/10" : "bg-primary/10")}>
+                    <Users className={cn("w-5 h-5", i % 2 === 0 ? "text-secondary" : "text-primary")} />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">{f.name}</h3>

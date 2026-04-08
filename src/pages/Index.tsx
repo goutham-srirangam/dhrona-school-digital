@@ -61,7 +61,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 md:mb-6">
+              <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4 md:mb-6">
                 ✦ Admissions Open for 2026-27
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-foreground leading-tight mb-4 md:mb-6">
@@ -79,7 +79,7 @@ export default function Index() {
                   </Button>
                 </Link>
                 <Link to="/about">
-                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-sm md:text-base px-6 md:px-8">
+                  <Button size="lg" variant="outline" className="border-secondary/30 text-secondary hover:bg-secondary/5 rounded-full text-sm md:text-base px-6 md:px-8">
                     Learn More
                   </Button>
                 </Link>
@@ -104,8 +104,11 @@ export default function Index() {
             {highlights.map((item, i) => (
               <RevealCard key={item.title} delay={i * 80}>
                 <div className="group bg-card rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className={cn(
+                    "w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform",
+                    i % 2 === 0 ? "bg-primary/10" : "bg-secondary/10"
+                  )}>
+                    <item.icon className={cn("w-6 h-6", i % 2 === 0 ? "text-primary" : "text-secondary")} />
                   </div>
                   <h3 className="font-display font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -127,9 +130,12 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoose.map((item, i) => (
               <RevealCard key={item.title} delay={i * 80}>
-                <div className="flex gap-4 p-5 rounded-xl border border-border/50 hover:border-primary/20 hover:shadow-md transition-all duration-300 bg-card">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
+                <div className="flex gap-4 p-5 rounded-xl border border-border/50 hover:border-secondary/20 hover:shadow-md transition-all duration-300 bg-card">
+                  <div className={cn(
+                    "w-11 h-11 rounded-lg flex items-center justify-center shrink-0",
+                    i % 2 === 0 ? "bg-secondary/10" : "bg-primary/10"
+                  )}>
+                    <item.icon className={cn("w-5 h-5", i % 2 === 0 ? "text-secondary" : "text-primary")} />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">{item.title}</h3>
@@ -154,7 +160,7 @@ export default function Index() {
             {testimonials.map((t, i) => (
               <RevealCard key={t.name} delay={i * 100}>
                 <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50 h-full flex flex-col">
-                  <Quote className="w-8 h-8 text-primary/20 mb-3" />
+                  <Quote className="w-8 h-8 text-secondary/20 mb-3" />
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1 italic">"{t.text}"</p>
                   <div className="mt-4 pt-4 border-t border-border/50">
                     <div className="flex gap-1 mb-2">
@@ -174,18 +180,20 @@ export default function Index() {
 
       {/* CTA Banner */}
       <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Admissions Open for 2026-27
-          </h2>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Give your child the gift of a future-ready education rooted in Indian values.
-          </p>
-          <Link to="/admissions">
-            <Button size="lg" className="bg-primary text-primary-foreground font-semibold rounded-full px-10 text-base">
-              Apply Now <ChevronRight className="w-4 h-4 ml-1" />
-            </Button>
-          </Link>
+        <div className="container mx-auto px-4">
+          <div className="bg-secondary rounded-2xl p-10 md:p-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary-foreground mb-4">
+              Admissions Open for 2026-27
+            </h2>
+            <p className="text-secondary-foreground/70 mb-8 text-lg">
+              Give your child the gift of a future-ready education rooted in Indian values.
+            </p>
+            <Link to="/admissions">
+              <Button size="lg" className="bg-primary text-primary-foreground font-semibold rounded-full px-10 text-base">
+                Apply Now <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
