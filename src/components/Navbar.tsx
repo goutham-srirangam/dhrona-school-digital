@@ -31,14 +31,24 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white/85 backdrop-blur-xl shadow-lg border-b border-white/20"
-          : "bg-transparent"
-      )}
-    >
+    <div className="fixed top-0 left-0 right-0 z-50">
+      {/* Marquee Banner */}
+      <div className="bg-primary text-primary-foreground text-xs sm:text-sm overflow-hidden whitespace-nowrap">
+        <div className="animate-marquee inline-block py-1.5 px-4">
+          📢 Admissions Open for 2026-27 &nbsp;|&nbsp; Classes Nursery to IX &nbsp;|&nbsp; IIT-JEE | NEET Training for VI to IX &nbsp;|&nbsp; 📞 +91 9493-46-1122
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          📢 Admissions Open for 2026-27 &nbsp;|&nbsp; Classes Nursery to IX &nbsp;|&nbsp; IIT-JEE | NEET Training for VI to IX &nbsp;|&nbsp; 📞 +91 9493-46-1122
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+      <nav
+        className={cn(
+          "transition-all duration-300",
+          scrolled
+            ? "bg-white/85 backdrop-blur-xl shadow-lg border-b border-white/20"
+            : "bg-transparent"
+        )}
+      >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg overflow-hidden">
@@ -119,6 +129,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+      </nav>
+    </div>
   );
 }

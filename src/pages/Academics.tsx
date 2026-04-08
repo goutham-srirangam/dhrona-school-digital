@@ -27,7 +27,7 @@ const grades = [
 
 export default function Academics() {
   return (
-    <main className="pt-20">
+    <main className="pt-28">
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Academics</h1>

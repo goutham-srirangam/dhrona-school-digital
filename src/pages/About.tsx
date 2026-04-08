@@ -26,7 +26,7 @@ const faculty = [
 
 export default function About() {
   return (
-    <main className="pt-20">
+    <main className="pt-28">
       {/* Hero */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
