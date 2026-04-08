@@ -59,7 +59,7 @@ export default function AdmissionPopup() {
               </Button>
             </Link>
             <a href="tel:+919493461122">
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 text-base">
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-8 text-base">
                 <Phone className="w-4 h-4 mr-2" /> Call Us
               </Button>
             </a>
