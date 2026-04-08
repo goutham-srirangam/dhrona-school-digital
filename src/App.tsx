@@ -23,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <AdmissionPopup />
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
