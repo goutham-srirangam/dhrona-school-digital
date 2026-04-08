@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import { Heart, Brain, Dumbbell, BookOpen, Shield, Music } from "lucide-react";
@@ -24,6 +25,7 @@ const activities = [
 export default function Activities() {
   return (
     <main className="pt-28">
+      <SEO title="Activities" description="Co-curricular activities at A.S.R Dhrona School — yoga, chess, Karra Saamu, kabaddi, cultural learning, shlokas, and sports programs in Miryalaguda." path="/activities" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Activities</h1>

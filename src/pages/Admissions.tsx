@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -37,6 +38,7 @@ export default function Admissions() {
 
   return (
     <main className="pt-28">
+      <SEO title="Admissions 2026-27" description="Apply now for admissions at A.S.R Dhrona School Miryalaguda — Nursery to Class IX. Limited seats, IIT-JEE/NEET foundation, holistic education. Call +91 9493-46-1122." path="/admissions" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">

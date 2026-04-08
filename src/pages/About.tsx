@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import { Eye, Target, Heart, GraduationCap, Globe, Users } from "lucide-react";
@@ -27,7 +28,7 @@ const faculty = [
 export default function About() {
   return (
     <main className="pt-28">
-      {/* Hero */}
+      <SEO title="About Us" description="Learn about A.S.R Dhrona School Miryalaguda — our vision, mission, NRI management, expert faculty, and commitment to physical, mental & cultural growth." path="/about" />
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">About <span className="text-secondary">A.S.R Dhrona</span></h1>
