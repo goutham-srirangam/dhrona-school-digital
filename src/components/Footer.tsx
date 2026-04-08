@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-lg font-display">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg font-display">
                 A
               </div>
               <div>
@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 to="/admissions"
-                className="inline-block px-5 py-2.5 rounded-full gradient-primary text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+                className="inline-block px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
               >
                 Apply Now →
               </Link>

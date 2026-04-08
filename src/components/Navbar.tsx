@@ -71,7 +71,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link to="/admissions">
-            <Button size="sm" className="ml-3 gradient-primary border-0 text-white">
+            <Button size="sm" className="ml-3 bg-primary text-primary-foreground border-0">
               Admissions Open
             </Button>
           </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link to="/admissions" className="mt-2">
-              <Button className="w-full gradient-primary border-0 text-white">
+              <Button className="w-full bg-primary text-primary-foreground border-0">
                 Admissions Open
               </Button>
             </Link>

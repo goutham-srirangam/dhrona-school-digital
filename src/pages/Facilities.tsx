@@ -24,11 +24,10 @@ const facilities = [
 export default function Facilities() {
   return (
     <main className="pt-20">
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-primary opacity-95" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Facilities</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">World-class infrastructure designed for safety, comfort, and learning.</p>
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Facilities</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">World-class infrastructure designed for safety, comfort, and learning.</p>
         </div>
       </section>
 
@@ -44,14 +43,14 @@ export default function Facilities() {
                 )}>
                   <div className={cn(
                     "w-12 h-12 rounded-xl flex items-center justify-center mb-4",
-                    f.highlight ? "gradient-primary text-white" : "bg-secondary/10 text-secondary"
+                    f.highlight ? "bg-primary/10 text-primary" : "bg-secondary/10 text-secondary"
                   )}>
                     <f.icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-display font-semibold text-foreground mb-2 text-lg">{f.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
                   {f.highlight && (
-                    <span className="inline-block mt-3 px-3 py-1 rounded-full text-xs font-medium gradient-primary text-white">
+                    <span className="inline-block mt-3 px-3 py-1 rounded-full text-xs font-medium bg-primary text-primary-foreground">
                       ✦ Unique to A.S.R Dhrona
                     </span>
                   )}

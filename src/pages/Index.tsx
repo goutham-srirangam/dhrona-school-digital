@@ -104,8 +104,8 @@ export default function Index() {
             {highlights.map((item, i) => (
               <RevealCard key={item.title} delay={i * 80}>
                 <div className="group bg-card rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <item.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <item.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-display font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -173,17 +173,16 @@ export default function Index() {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-primary" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Admissions Open for 2026-27
           </h2>
-          <p className="text-white/80 mb-8 text-lg">
+          <p className="text-muted-foreground mb-8 text-lg">
             Give your child the gift of a future-ready education rooted in Indian values.
           </p>
           <Link to="/admissions">
-            <Button size="lg" className="bg-white text-secondary hover:bg-white/90 font-semibold rounded-full px-10 text-base shadow-xl">
+            <Button size="lg" className="bg-primary text-primary-foreground font-semibold rounded-full px-10 text-base">
               Apply Now <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
           </Link>
