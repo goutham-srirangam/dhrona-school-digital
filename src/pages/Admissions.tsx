@@ -39,10 +39,10 @@ export default function Admissions() {
     <main className="pt-28">
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
             ✦ 2026-27 Session
           </span>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Admissions Open</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Admissions <span className="text-primary">Open</span></h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Nursery to Class IX — Limited seats available. Secure your child's future today.</p>
         </div>
       </section>
@@ -55,7 +55,10 @@ export default function Admissions() {
             {steps.map((step, i) => (
               <RevealDiv key={i} delay={i * 100}>
                 <div className="bg-card rounded-xl p-5 border border-border/50 shadow-sm h-full">
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mb-3">
+                  <div className={cn(
+                    "w-10 h-10 rounded-full flex items-center justify-center font-bold mb-3 text-white",
+                    i % 2 === 0 ? "bg-primary" : "bg-secondary"
+                  )}>
                     {i + 1}
                   </div>
                   <p className="text-sm text-muted-foreground">{step}</p>
@@ -107,7 +110,7 @@ export default function Admissions() {
                 Submit Application <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
               <p className="text-xs text-center text-muted-foreground">
-                Or call us directly: <a href="tel:+919493461122" className="text-primary font-medium">+91 9493-46-1122</a>
+                Or call us directly: <a href="tel:+919493461122" className="text-secondary font-medium">+91 9493-46-1122</a>
               </p>
             </form>
           </RevealDiv>

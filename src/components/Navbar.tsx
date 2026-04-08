@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
       {/* Marquee Banner */}
-      <div className="bg-primary text-primary-foreground text-xs sm:text-sm overflow-hidden whitespace-nowrap">
+      <div className="bg-secondary text-secondary-foreground text-xs sm:text-sm overflow-hidden whitespace-nowrap">
         <div className="animate-marquee inline-block py-1.5 px-4">
           📢 Admissions Open for 2026-27 &nbsp;|&nbsp; Classes Nursery to IX &nbsp;|&nbsp; IIT-JEE | NEET Training for VI to IX &nbsp;|&nbsp; 📞 +91 9493-46-1122
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

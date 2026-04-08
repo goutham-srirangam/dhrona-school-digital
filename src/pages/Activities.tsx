@@ -38,10 +38,10 @@ export default function Activities() {
             {activities.map((a, i) => (
               <RevealDiv key={a.title} delay={i * 80}>
                 <div className="group bg-card rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="h-2 bg-primary" />
+                  <div className={cn("h-2", i % 2 === 0 ? "bg-primary" : "bg-secondary")} />
                   <div className="p-6">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <a.icon className="w-6 h-6 text-primary" />
+                    <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", i % 2 === 0 ? "bg-primary/10" : "bg-secondary/10")}>
+                      <a.icon className={cn("w-6 h-6", i % 2 === 0 ? "text-primary" : "text-secondary")} />
                     </div>
                     <h3 className="font-display font-semibold text-foreground mb-2 text-lg">{a.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{a.desc}</p>
