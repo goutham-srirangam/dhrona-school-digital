@@ -64,7 +64,7 @@ export default function Index() {
               <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4 md:mb-6">
                 ✦ Admissions Open for 2026-27
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-foreground leading-tight mb-4 md:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-secondary leading-tight mb-4 md:mb-6">
                 Miryalaguda's First{" "}
                 <span className="text-primary">Future Ready</span>{" "}
                 School
