@@ -41,7 +41,7 @@ export default function Admissions() {
         <div className="absolute inset-0 gradient-primary opacity-95" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-white/90 text-sm font-medium mb-4 backdrop-blur-sm">
-            ✦ 2025-26 Session
+            ✦ 2026-27 Session
           </span>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Admissions Open</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">Nursery to Class IX — Limited seats available. Secure your child's future today.</p>

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
+import heroImg from "@/assets/hero-school.jpg";
 import {
   Heart, Brain, Dumbbell, BookOpen, Trophy, Lock, Stethoscope,
   GraduationCap, Globe, Users, Lightbulb, BookOpenCheck, Sparkles,
@@ -58,29 +59,34 @@ export default function Index() {
       {/* Hero */}
       <section className="min-h-[85vh] flex items-center">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              ✦ Admissions Open for 2025-26
-            </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6">
-              Miryalaguda's First{" "}
-              <span className="text-primary">Future Ready</span>{" "}
-              School
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              We Truly Care for the Physical, Mental & Cultural Growth of Our Little Ones
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/admissions">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base px-8 rounded-full shadow-md">
-                  Apply Now <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
-              </Link>
-              <Link to="/about">
-                <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-base px-8">
-                  Learn More
-                </Button>
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                ✦ Admissions Open for 2026-27
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6">
+                Miryalaguda's First{" "}
+                <span className="text-primary">Future Ready</span>{" "}
+                School
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                We Truly Care for the Physical, Mental & Cultural Growth of Our Little Ones
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/admissions">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base px-8 rounded-full shadow-md">
+                    Apply Now <ChevronRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
+                <Link to="/about">
+                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-base px-8">
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <img src={heroImg} alt="Happy students at A.S.R Dhrona School" width={1920} height={1024} className="rounded-2xl shadow-xl object-cover w-full aspect-[16/9]" />
             </div>
           </div>
         </div>
@@ -171,7 +177,7 @@ export default function Index() {
         <div className="absolute inset-0 gradient-primary" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            Admissions Open for Nursery to IX
+            Admissions Open for 2026-27
           </h2>
           <p className="text-white/80 mb-8 text-lg">
             Give your child the gift of a future-ready education rooted in Indian values.
