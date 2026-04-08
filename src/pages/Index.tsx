@@ -55,37 +55,37 @@ function RevealCard({ children, className, delay = 0 }: { children: React.ReactN
 
 export default function Index() {
   return (
-    <main>
+    <main className="pt-24 md:pt-28">
       {/* Hero */}
-      <section className="min-h-[85vh] flex items-center">
+      <section className="min-h-[60vh] md:min-h-[75vh] flex items-center py-10 md:py-0">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 md:mb-6">
                 ✦ Admissions Open for 2026-27
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-foreground leading-tight mb-4 md:mb-6">
                 Miryalaguda's First{" "}
                 <span className="text-primary">Future Ready</span>{" "}
                 School
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
                 We Truly Care for the Physical, Mental & Cultural Growth of Our Little Ones
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
                 <Link to="/admissions">
-                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base px-8 rounded-full shadow-md">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm md:text-base px-6 md:px-8 rounded-full shadow-md">
                     Apply Now <ChevronRight className="w-4 h-4 ml-1" />
                   </Button>
                 </Link>
                 <Link to="/about">
-                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-base px-8">
+                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full text-sm md:text-base px-6 md:px-8">
                     Learn More
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="mt-6 lg:mt-0">
               <img src={heroImg} alt="Happy students at A.S.R Dhrona School" width={1920} height={1024} className="rounded-2xl shadow-xl object-cover w-full aspect-[16/9]" />
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function Index() {
             title="What Parents Say"
             description="Hear from families who trust A.S.R Dhrona for their children's future."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {testimonials.map((t, i) => (
               <RevealCard key={t.name} delay={i * 100}>
                 <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50 h-full flex flex-col">
