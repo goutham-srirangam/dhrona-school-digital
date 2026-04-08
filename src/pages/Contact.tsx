@@ -37,11 +37,10 @@ export default function Contact() {
 
   return (
     <main className="pt-20">
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-primary opacity-95" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">We'd love to hear from you. Reach out for admissions, queries, or a campus visit.</p>
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Contact Us</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We'd love to hear from you. Reach out for admissions, queries, or a campus visit.</p>
         </div>
       </section>
 
@@ -55,8 +54,8 @@ export default function Contact() {
                 {contactInfo.map((c, i) => (
                   <RevealDiv key={c.title} delay={i * 80}>
                     <div className="bg-card rounded-xl p-5 border border-border/50 shadow-sm h-full">
-                      <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center mb-3">
-                        <c.icon className="w-5 h-5 text-white" />
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                        <c.icon className="w-5 h-5 text-primary" />
                       </div>
                       <h3 className="font-display font-semibold text-foreground text-sm mb-1">{c.title}</h3>
                       {c.lines.map((line, j) => (
@@ -107,7 +106,7 @@ export default function Contact() {
                     <Label htmlFor="c-msg">Message *</Label>
                     <Textarea id="c-msg" required rows={4} value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} placeholder="How can we help you?" />
                   </div>
-                  <Button type="submit" size="lg" className="w-full gradient-primary border-0 text-white rounded-full font-semibold">
+                  <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground rounded-full font-semibold">
                     Send Message
                   </Button>
                 </form>

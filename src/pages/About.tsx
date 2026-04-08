@@ -28,11 +28,10 @@ export default function About() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-primary opacity-95" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">About A.S.R Dhrona</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">Global Vision, Indian Roots — shaping tomorrow's leaders with timeless values.</p>
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">About A.S.R Dhrona</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Global Vision, Indian Roots — shaping tomorrow's leaders with timeless values.</p>
         </div>
       </section>
 
@@ -42,8 +41,8 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <RevealDiv>
               <div className="bg-card rounded-xl p-8 border border-border/50 shadow-sm h-full">
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-5">
-                  <Eye className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                  <Eye className="w-7 h-7 text-primary" />
                 </div>
                 <h2 className="text-2xl font-display font-bold text-foreground mb-3">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -53,8 +52,8 @@ export default function About() {
             </RevealDiv>
             <RevealDiv delay={100}>
               <div className="bg-card rounded-xl p-8 border border-border/50 shadow-sm h-full">
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-5">
-                  <Target className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                  <Target className="w-7 h-7 text-primary" />
                 </div>
                 <h2 className="text-2xl font-display font-bold text-foreground mb-3">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -67,7 +66,7 @@ export default function About() {
       </section>
 
       {/* Philosophy */}
-      <section className="section-padding bg-muted/50">
+      <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading label="Our Philosophy" title="Physical · Mental · Cultural" description="We believe true education develops the whole child — body, mind, and spirit." />
           <div className="grid md:grid-cols-3 gap-6">
@@ -94,8 +93,8 @@ export default function About() {
             {faculty.map((f, i) => (
               <RevealDiv key={f.name} delay={i * 100}>
                 <div className="flex gap-4 p-5 rounded-xl border border-border/50 bg-card shadow-sm">
-                  <div className="w-11 h-11 rounded-lg gradient-primary flex items-center justify-center shrink-0">
-                    <Users className="w-5 h-5 text-white" />
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Users className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">{f.name}</h3>

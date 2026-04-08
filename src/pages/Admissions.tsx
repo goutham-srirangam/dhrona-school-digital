@@ -37,26 +37,25 @@ export default function Admissions() {
 
   return (
     <main className="pt-20">
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-primary opacity-95" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-white/90 text-sm font-medium mb-4 backdrop-blur-sm">
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             ✦ 2026-27 Session
           </span>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Admissions Open</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">Nursery to Class IX — Limited seats available. Secure your child's future today.</p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">Admissions Open</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Nursery to Class IX — Limited seats available. Secure your child's future today.</p>
         </div>
       </section>
 
       {/* Process */}
-      <section className="section-padding bg-muted/50">
+      <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading label="Process" title="How to Apply" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {steps.map((step, i) => (
               <RevealDiv key={i} delay={i * 100}>
                 <div className="bg-card rounded-xl p-5 border border-border/50 shadow-sm h-full">
-                  <div className="w-10 h-10 rounded-full gradient-primary flex items-center justify-center text-white font-bold mb-3">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mb-3">
                     {i + 1}
                   </div>
                   <p className="text-sm text-muted-foreground">{step}</p>
@@ -104,7 +103,7 @@ export default function Admissions() {
                   </SelectContent>
                 </Select>
               </div>
-              <Button type="submit" size="lg" className="w-full gradient-primary border-0 text-white rounded-full text-base font-semibold">
+              <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground rounded-full text-base font-semibold">
                 Submit Application <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
               <p className="text-xs text-center text-muted-foreground">

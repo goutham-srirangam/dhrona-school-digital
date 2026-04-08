@@ -23,7 +23,7 @@ export default function SectionHeading({ label, title, description, className, a
       )}
     >
       {label && (
-        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase gradient-primary text-white mb-4">
+        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary text-primary-foreground mb-4">
           {label}
         </span>
       )}
