@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/dhrona-school-digital">
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
